@@ -1,24 +1,20 @@
 // Chakra imports
-import { Flex } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import React from "react";
-import Authors from "./components/Authors";
-import Projects from "./components/Projects";
-import { tablesTableData, dashboardTableData } from "variables/general";
 
 function Tables() {
   return (
-    <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
-      <Authors
-        title={"Authors Table"}
-        captions={["Author", "Function", "Status", "Employed", ""]}
-        data={tablesTableData}
-      />
-      <Projects
-        title={"Projects Table"}
-        captions={["Companies", "Budget", "Status", "Completion", ""]}
-        data={dashboardTableData}
-      />
-    </Flex>
+    <Box pt={{ base: "120px", md: "75px" }}>
+      <Text fontSize="xl" fontWeight="bold">
+        Tables have been moved to their respective routes:
+      </Text>
+      <Text mt={4}>
+        • Products table is now at <strong>/products</strong>
+      </Text>
+      <Text>
+        • Event logs table is now at <strong>/events</strong>
+      </Text>
+    </Box>
   );
 }
 
